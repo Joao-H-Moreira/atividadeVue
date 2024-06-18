@@ -17,7 +17,9 @@ var profissionaisVue = new Vue({
   el: "#profissionaisVue",
   data: () => {
       return {
-          id: 0
+          atendimentoPaciente:{
+            consulta, avaliacao,
+          }
       }
   },
   methods: {

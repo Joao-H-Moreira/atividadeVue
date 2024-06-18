@@ -14,7 +14,7 @@
     </ul>
     
     <h2>Atendimento de Pacientes</h2>
-    <form id="form-atendimento-paciente">
+    <form id="atendimentoPaciente">
       <label for="consulta">Consulta:</label>
       <select id="consulta">
         <option value="1">Consulta 1</option>
@@ -22,12 +22,15 @@
         <option value="3">Consulta 3</option>
       </select>
       <br>
-      <label for="avaliacao">Avaliação:</label>
-      <input type="text" id="avaliacao">
+      <input type="radio" id="Compareceu" value="Compareceu" v-model="picked">
+      <label for="Compareceu">Compareceu</label>
       <br>
-      <button type="submit">Registrar</button>
+      <input type="radio" id="Faltou" value="Faltou" v-model="picked">
+      <label for="Faltou">Faltou</label>
+      <br>
     </form>
   </form>
+  <button  v-on:click="Registrar">Registrar</button>
   </div>
     
 </body>
