@@ -1,10 +1,15 @@
 
+body{
+  background-color: rgb(218, 197, 197);
+  background-size: cover;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-      background-color: #b8b7b7;
+      background-color: #ff0000;
   
   }
   
@@ -14,12 +19,16 @@ ul {
   
   li a {
     display: block;
-    color: rgb(255, 0, 0);
+    color: rgb(241, 241, 241);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
   
   li a:hover {
-    background-color: #fffefe;
+    background-color: #e66666;
   }
+footer{
+  background-color: rgb(255, 0, 0);
+  text-align: center;
+}
