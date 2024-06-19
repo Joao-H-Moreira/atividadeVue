@@ -1,6 +1,5 @@
 
 
-
 var profissionaisVue = new Vue({
   el: "#profissionaisVue",
   data: () => {
@@ -9,9 +8,6 @@ var profissionaisVue = new Vue({
             consulta, avaliacao,
           }
       }
-  },
-  mounted() {
-    
   },
   methods: {
       test() {
