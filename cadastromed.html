@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Módulo de Cadastro medico</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+   ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #b8b7b7;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #fffefe;
+}
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pacientes.html">Paciente</a></li>
+        <li><a href="profissionais.html">Agenda dos Medicos</a></li>
+        <li><a href="cadastromed.html">Cadastro dos Medicos</a></li>
+      </ul>
+
+
+  <div id="medicosVue" >
+    <h2>Cadastro de Medicos</h2>
+    <form v-if="true">
+      <label for="nome">Nome:</label>
+      <input v-model="medicoObj.nome" type="text" placeholder="Digite seu nome" id="nome">
+      <br>
+      <label for="CRM">CRM:</label>
+      <input v-model="medicoObj.CRM" type="text" placeholder="Digite seu CRM"id="endereco">
+      <br>
+    </form>
+    <button v-on:click="cadastrar" >Cadastrar</button>
+  </div>
+  </body>
+  <script src="cadastromed.js"> </script>
+</html>
