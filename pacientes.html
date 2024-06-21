@@ -45,9 +45,8 @@
       <br>
       <label for="profissional">Profissional:</label>
       <select id="profissional">
-        <option value="1">Profissional 1</option>
-        <option value="2">Profissional 2</option>
-        <option value="3">Profissional 3</option>
+         <li v-for="medicoObj in listaMedicos" :key="medicoObj.nome">
+          {{medicoObj}}
       </select>
       <br>
       <label for="data">Data:</label>

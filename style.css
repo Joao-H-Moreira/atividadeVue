@@ -1,6 +1,6 @@
 
 body{
-  background-color: rgb(218, 197, 197);
+  background-color: rgb(255, 255, 255);
   background-size: cover;
 }
 
@@ -26,7 +26,7 @@ ul {
   }
   
   li a:hover {
-    background-color: #e66666;
+    background-color: #ca7171;
   }
 footer{
   background-color: rgb(255, 0, 0);

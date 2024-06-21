@@ -15,8 +15,7 @@ var medicosVue = new Vue({
       },  
     methods: {
         cadastrar(){
-          
-         this.listaMedicos.push(this.listaMedicos)
+         this.listaMedicos.push(this.medicoObj)
          localStorage.setItem("listaMedicos",JSON.stringify (this.listaMedicos))
         }
 

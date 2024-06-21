@@ -4,14 +4,20 @@ var profissionaisVue = new Vue({
   el: "#profissionaisVue",
   data: () => {
       return {
-          atendimentoPaciente:{
+          atendimentoPacienteObj:{
             consulta, avaliacao,
           }
+          ,atendimentoPaciente:[]
       }
   },
+  mounted() {
+    if(localStorage.getItem("atendimentoPaciente")!=null ){ 
+      this.atendimentoPaciente=JSON.parse(localStorage.getItem("atendimentoPaciente"))}
+  },
   methods: {
-      test() {
-          return this.id;
-      }
+    registrar(){
+      this.atendimentoPaciente.push(this.atendimentoPacienteObj)
+      localStorage.setItem("atendimentoPaciente",JSON.stringify (this.atendimentoPaciente))
+     }
   }
 })
