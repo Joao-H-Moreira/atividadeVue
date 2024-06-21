@@ -16,30 +16,30 @@
 
   <div id= "profissionaisVue">
     <h2>Visualização de Agenda</h2>
-    <ul id="example-1">
-      <li v-for="item in items" :key="item.message">
-        {{ item.message }}
+    <ul class="lista" id="example-1">
+      <li class="itens" v-for="agendamentoObj in listaAgendamento" :key="agendamentoObj.id">
+        {{agendamentoObj}}
       </li>
     </ul>
     
     <h2>Atendimento de Pacientes</h2>
     <form id="atendimentoPaciente">
       <label for="consulta">Consulta:</label>
-      <select id="consulta">
-          <li v-for="pacienteObj in listaPacientes" :key="pacienteObj.nome">
-          {{pacienteObj}}
-          </li>
+      <select v-model="selecionado" id="consulta">
+          <option v-for="(agendamentoObj,index) in listaAgendamento" :key="index" v-on:click="indice=index">
+         Nome: {{agendamentoObj.paciente}}, {{agendamentoObj.data}}, {{agendamentoObj.horario}},  {{agendamentoObj.id}}
+          </option>
       </select>
       <br>
-      <input type="radio" id="Compareceu" value="Compareceu" v-model="picked">
+      <input type="checkbox" id="Compareceu" value="Compareceu" v-model="compareceu">
       <label for="Compareceu">Compareceu</label>
       <br>
-      <input type="radio" id="Faltou" value="Faltou" v-model="picked">
+      <input type="checkbox" id="Faltou" value="Faltou" v-model="faltou">
       <label for="Faltou">Faltou</label>
       <br>
     </form>
   </form>
-  <button  v-on:click="registrar">Registrar</button>
+  <button  v-on:click="confirmar">Registrar</button>
   </div>
     
 </body>

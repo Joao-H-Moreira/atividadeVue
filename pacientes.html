@@ -15,7 +15,6 @@
   </ul>
 
 
-
   <div id="pacientesVue" >
     <h2>Cadastro de Pacientes</h2>
     <form v-if="true">
@@ -37,23 +36,24 @@
     <h2>Agendamento de Consultas</h2>
     <form>
       <label for="paciente">Paciente:</label>
-      <select id="paciente">
-        <li v-for="pacienteObj in listaPacientes" :key="pacienteObj.nome">
-        {{pacienteObj}}
-        </li>
+      <select v-model="agendamentoObj.paciente" id="paciente">
+        <option v-for="pacienteObj in listaPacientes" :key="pacienteObj.nome">
+        {{pacienteObj.nome}}
+        </option>
       </select>
       <br>
       <label for="profissional">Profissional:</label>
-      <select id="profissional">
-         <li v-for="medicoObj in listaMedicos" :key="medicoObj.nome">
-          {{medicoObj}}
+      <select v-model="agendamentoObj.profissional" id="profissional">
+         <option v-for="medicoObj in listaMedicos" :key="medicoObj.nome">
+          {{medicoObj.nome}}
+          </option>
       </select>
       <br>
       <label for="data">Data:</label>
-      <input type="date" id="data">
+      <input v-model="agendamentoObj.data" type="date" id="data" >
       <br>
       <label for="horario">Horário:</label>
-      <input type="time" id="horario">
+      <input v-model="agendamentoObj.horario" type="time" id="horario" >
       <br>
     </form>
     <button v-on:click="agendar">Agendar</button>
